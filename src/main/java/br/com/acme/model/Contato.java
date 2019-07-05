@@ -4,6 +4,7 @@
 package br.com.acme.model;
 
 import javax.persistence.Entity;
+import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
@@ -12,8 +13,10 @@ import javax.persistence.Table;
  *
  */
 @SuppressWarnings("serial")
-@NamedQuery(name="Contato.findAll", query="SELECT c FROM Contato c")
-@NamedQuery(name = "Contato.findAllCount", query = "SELECT COUNT(c) FROM Contato c")
+@NamedQueries({
+	@NamedQuery(name = "Contato.findAllCount", query = "SELECT COUNT(c) FROM Contato c"),
+	@NamedQuery(name="Contato.findAll", query="SELECT c FROM Contato c")
+})
 @Entity
 @Table(name="TB_CONTATOS")
 public class Contato extends AbstractEntity<Long> {

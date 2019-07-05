@@ -9,5 +9,11 @@
 		<welcome-file>_login.jsp</welcome-file>
 	</welcome-file-list>
 	
+	    <!-- WELD -->
+  <listener>
+    <listener-class>org.jboss.weld.environment.servlet.Listener</listener-class>
+  </listener>
+    
+	
 	
 </web-app>

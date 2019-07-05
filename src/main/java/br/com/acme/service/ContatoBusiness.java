@@ -5,6 +5,8 @@ package br.com.acme.service;
 
 import java.util.Collection;
 
+import javax.inject.Inject;
+
 import br.com.acme.dao.contato.ContatoDaoImpl;
 import br.com.acme.model.Contato;
 
@@ -14,6 +16,7 @@ import br.com.acme.model.Contato;
  */
 public class ContatoBusiness {
 
+//	@Inject
 	private ContatoDaoImpl dao;
 
 	public ContatoBusiness() {

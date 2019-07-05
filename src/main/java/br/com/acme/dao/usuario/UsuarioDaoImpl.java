@@ -182,7 +182,7 @@ public class UsuarioDaoImpl implements IUsuarioDao {
 		
 		try {
 			factory.getTransaction().begin();
-			usuario = this.factory.createQuery("SELECT u FROM Usuario u WHERE u.nome = :nome ", Usuario.class)
+			usuario = this.factory.createQuery("SELECT u FROM Usuario u WHERE u.nome =:nome ", Usuario.class)
 					.setParameter("nome", nome ).getSingleResult();
 
 			return usuario;

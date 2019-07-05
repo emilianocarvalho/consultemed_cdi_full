@@ -3,6 +3,7 @@ package br.com.acme.controller;
 import java.io.IOException;
 import java.util.Collection;
 
+import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -28,6 +29,7 @@ public class ContatoController extends HttpServlet {
 
 	private static final String NOME_USUARIO = "nome";
 
+//	@Inject
 	private ContatoBusiness business;
 
 	private static final long serialVersionUID = 1L;
