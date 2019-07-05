@@ -66,7 +66,6 @@
                 <table class="table no-margin">
                   <thead>
                   <tr>
-                    <th>Id</th>
                     <th>Nome</th>
                     <th>Email</th>
                     <th>Telefone</th>
@@ -75,18 +74,14 @@
                   </thead>
 					<c:forEach var="c" items="${contatos}">
 						<tr>
-							<td>${c.id == null ? '' : c.id}</td>
 							<td>${c.nome == null ? '' : c.nome}</td>
 							<td>${c.email == null ? '' : c.email}</td>
 							<td>${c.telefone == null ? '' : c.telefone}</td>
-							<td>
 								<td>
-	                        		<a href="${pageContext.request.contextPath}/admin/contatos?id=${c.id}&action=editar" class="btn btn-sm btn-primary">Editar</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	                        		<button value="Excluir" onclick="setaDadosModal(${c.id});" type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#exampleModal">
-									 Excluir
-									</button>                   
+	                        		<a href="${pageContext.request.contextPath}/admin/contatos?id=${c.id}&action=editar" class="btn btn-sm btn-primary">Editar</a>
+	                        		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	                        		<button value="Excluir" onclick="setaDadosModal(${c.id});" type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#exampleModal">Excluir</button>                   
 	                    		</td>
-							</td>
 						</tr>
 				
 				</c:forEach>

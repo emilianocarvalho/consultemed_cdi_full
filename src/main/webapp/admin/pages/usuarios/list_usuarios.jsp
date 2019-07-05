@@ -66,7 +66,6 @@
                 <table class="table no-margin">
                   <thead>
                   <tr>
-                    <th>Id</th>
                     <th>Nome</th>
                     <th>Login</th>
                     <th>Status</th>
@@ -76,21 +75,17 @@
                   </thead>
 					<c:forEach var="u" items="${usuarios}">
 						<tr>
-							<td>${u.id == null ? '' : u.id}</td>
 							<td>${u.nome == null ? '' : u.nome}</td>
 							<td>${u.login == null ? '' : u.login}</td>
 							<td>${u.ativo ? 'Ativo' : 'Inativo'}</td>
 							<td>${u.administrador ? 'Administrador' : ''}  ${u.visitante ? 'Visitante' : ''}</td>
 							<td>
-								<td>
-	                        		<a href="${pageContext.request.contextPath}/admin/usuarios?id=${u.id}&action=editar" class="btn btn-sm btn-primary">Editar</a>&nbsp;&nbsp;&nbsp;
-	                        		
-	                        		<a onclick="setaDadosModal(${u.id});" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#exampleModal">Excluir</a>
-	                        		 
-									<a href="${pageContext.request.contextPath}/admin/usuarios?id=${u.id}&action=ativar_desativar" 
+                        		<a href="${pageContext.request.contextPath}/admin/usuarios?id=${u.id}&action=editar" class="btn btn-sm btn-primary">Editar</a>&nbsp;&nbsp;&nbsp;
+                        		
+                        		<a onclick="setaDadosModal(${u.id});" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#exampleModal">Excluir</a>
+                        		 
+								<a href="${pageContext.request.contextPath}/admin/usuarios?id=${u.id}&action=ativar_desativar" 
                         				class="${u.ativo ? "btn btn-sm btn-warning" : "btn btn-sm btn-success" }">${u.ativo ? 'Desativar' : 'Ativar'}</a>
-                        			                  
-	                    		</td>
 							</td>
 						</tr>
 				

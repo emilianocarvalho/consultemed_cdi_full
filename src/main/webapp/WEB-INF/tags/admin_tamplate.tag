@@ -66,13 +66,13 @@
         <li class="active treeview">
           <a href="${pageContext.request.contextPath}/admin/dashboard">
             <i class="fa fa-dashboard"></i> 
-            <span>Menu Principal</span>
+            <span >Menu</span>
           </a>
         </li>
         
         <li><a href="${pageContext.request.contextPath}/admin/contatos?action=list"><i class="fa fa-circle-o text-aqua"></i> <span>Contatos</span></a></li>
         <li><a href="${pageContext.request.contextPath}/admin/usuarios?action=list"><i class="fa fa-circle-o text-aqua"></i> <span>Usuários</span></a></li>
-        <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Solicitações</span></a></li>
+<!--         <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Solicitações</span></a></li> -->
       </ul>
     </section>
 
